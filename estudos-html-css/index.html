@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercícios HTML</title>
+    <style>
+      #conteudo {
+        padding: 30px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Exercícios HTML</h1>
+
+    <nav>
+      <!-- Exemplo sem propriedade -->
+
+      <a href="exercicios/texto1.html"> 01 - Textos 1</a>
+      <a href="exercicios/texto2.html"> 02 - Textos 2</a>
+      <a href="exercicios/listas.html"> 03 - Listas</a>
+      <a href="exercicios/listaAninhada.html"> 04 - Lista Aninhada</a>
+
+      <!-- Exemplo com propriedade -->
+      <!-- <a href wm-link="exercicios/2.html"> 02 - Teste 2</a> -->
+    </nav>
+
+    <section id="conteudo"></section>
+    <footer>Curso de Web Moderno</footer>
+    <script>
+      //link é o href
+      //Exemplo pegando por propriedade
+      //document.querySelectorAll("[wm-link]").forEach((link) =>
+      document.querySelectorAll("a").forEach((link) => {
+        console.log(link);
+        link.onclick = function (e) {
+          const conteudo = document.getElementById("conteudo");
+
+          //Previne que o comportamento padrão ocorra
+          e.preventDefault();
+          //faz uma requisição ajax
+          //Exemplo fetch por propriedade
+          //fetch(link.getAttribute('wm-link'))
+          fetch(link.href)
+            .then((resp) => resp.text())
+            .then((html) => (conteudo.innerHTML = html));
+        };
+      });
+    </script>
+  </body>
+</html>

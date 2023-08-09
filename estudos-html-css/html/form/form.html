@@ -1,0 +1,45 @@
+<h1>Formulário</h1>
+
+<form>
+    <input type="text" name="nome">
+    <input type="password" name="senha">
+    <textarea name="bio" cols="30" rows="10"></textarea>
+    <div>
+        <input type="radio" name="tipo" value="admin"> Admin
+        <input type="radio" name="tipo" value="regular"> Regular
+        <input type="radio" name="tipo" value="professor"> Professor
+    </div>
+    <div>
+        <input type="checkbox" name="ativo"> Ativo
+    </div>
+
+    <select name="estado">
+        <option value="ac">Acre</option>
+        <option value="ba">Bahia</option>
+        <option value="sp">São Paulo</option>
+    </select>
+
+    <select name="interesses" multiple size="7">
+        <option value="js">JavaScript</option>
+        <option value="dart">Dart</option>
+        <option value="java">Java</option>
+        <option value="go">Go</option>
+    </select>
+
+    <button>Incluir</button>
+    <button>Alterar</button>
+</form>
+
+<style>
+    input, textarea {
+        /* um elemento em cada linha */
+        display: block;
+        margin-bottom: 10px;
+
+    }
+    
+    /* deixa só os input do mesmo tipo alinhado como linha */
+    input[type=radio], input[type=checkbox] {
+        display: inline;
+    }
+</style>

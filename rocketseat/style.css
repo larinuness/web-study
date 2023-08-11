@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-image: url(./assets/bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    cobre toda area visível 
+    background-size: cover; */
+
+  background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+}
+/* tudo universal que ta dentro do body */
+body * {
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+#container {
+  width: 360px;
+  margin: 56px auto 0px;
+
+  /* (display: block) pega toda largura disponivel (Expanded do Flutter)
+  e qualquer próximo elemento depois dele, fica em baixo como uma Coluna(Column do FLutter)*/
+  /* (display: none) tira o tag da tela (Visible do Flutter) */
+  /* (display: inline) deixa um ao lado do outro em linha (Row do Flutter) */
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/* links */
+
+ul {
+  /* tira as bolinhas da lista */
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  /* espaço entre os elementos */
+  gap: 16px;
+}
+
+ul li a {
+  border-radius: 8px;
+  /* pra deixar no centro dessa forma assim */
+  display: flex;
+  /* deixa no centro vertical */
+  justify-content: center;
+  /* no meio da linha (centro horizontal) */
+  align-items: center;
+  /* ou assim
+    display: block;
+    text-align: center; */
+  padding: 16px 24px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+ul li a:hover {
+  border-radius: 8px;
+  border: 1.5px solid  #fff;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+}

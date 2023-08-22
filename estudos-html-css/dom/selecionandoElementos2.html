@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Selecionar Elementos #02</title>
-    <link rel="stylesheet" href="css/estilo.css">
-</head>
-<body class="conteudo exercicio">
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
+  <body class="conteudo exercicio">
     <div id="primeiro">#primeiro</div>
     <div>Segundo</div>
     <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
-    <script>              
-        // ...
+    <script>
+      //passa com o # pq o querySelector espera um seletor css
+      document.querySelector("#primeiro").classList.add("destaque");
+
+      //função que recebe um seletor como parametro
+      const selecionar = (seletor) =>
+        document
+          .querySelectorAll(seletor)
+          .forEach((e) => e.classList.add("destaque"));
+
+      const deselecionar = (seletor) =>
+        document
+          .querySelectorAll(seletor)
+          .forEach((e) => e.classList.remove("destaque"));
+
+      selecionar("div");
+
+      deselecionar("div");
+
+      selecionar(".terceiro.ultimo");
+
+      deselecionar("*");
+
+      //todo mundo que não é 'primeiro' vai ser selecionado
+      selecionar(":not(#primeiro)");
+
+      deselecionar("*");
+
+      selecionar(":nth-child(1)");
+
+      deselecionar("*");
     </script>
-</body>
+  </body>
 </html>

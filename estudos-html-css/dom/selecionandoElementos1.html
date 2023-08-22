@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Selecionar Elementos #01</title>
-    <link rel="stylesheet" href="css/estilo.css">
-</head>
-<body class="conteudo exercicio">
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
+  <body class="conteudo exercicio">
     <div id="primeiro">#primeiro</div>
     <div>Segundo</div>
     <div class="terceiro ultimo">.terceiro .ultimo</div>
-    <script>              
-        // ...
+    <script>
+      //como é esperado um id não precisar usar o '#''
+      //se tiver com dois id iguais ele vai pegar o primeiro
+      document.getElementById("primeiro").classList.add("destaque");
+
+      //todos os elementos com a tag div vão ser selecionados
+      //html collections
+      const divs = document.getElementsByTagName("div");
+
+      //transforma num array e modifica
+      Array.from(divs).forEach((e) => e.classList.remove("destaque"));
+
+      //espalha os elementos dentro do array
+      // o '...' é o operador spread
+      const divsArray = [...divs];
+      divsArray.forEach((e) => e.classList.add("destaque"));
+
+      const ultimosElementos = document.getElementsByClassName("ultimo");
+      for (let e of ultimosElementos) {
+        e.classList.remove("destaque");
+      }
     </script>
-</body>
+  </body>
 </html>

@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset='UTF-8'>
+  <head>
+    <meta charset="UTF-8" />
     <title>Trabalhando com Eventos #02</title>
-    <link rel='stylesheet' href='css/estilo.css'>
-</head>
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
 
-<body class="conteudo exercicio">
+  <body class="conteudo exercicio">
     <div>Elemento</div>
     <script>
-        // ...
+      const item = document.querySelector("div");
+      // deixa o item na posição especifica
+      item.style.position = "absolute";
+
+      //função onde o "e" é o parametro que vai receber (o evento)
+      item.onmousemove = (e) => {
+        const item = e.target;
+        item.style.cursor = "move";
+        if (e.buttons) {
+          // "e" é o evento
+          item.style.top = `${e.clientY - item.clientHeight / 2}px`;
+          item.style.left = `${e.clientX - item.clientWidth / 2}px`;
+        }
+      };
     </script>
-</body>
+  </body>
+</html>

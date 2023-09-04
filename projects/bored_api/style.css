@@ -1,0 +1,60 @@
+*{
+    font-family: Arial,sans-serif;
+    color: #494949;
+}
+
+body {
+  background: rgb(164, 231, 232);
+  background: linear-gradient(
+    0deg,
+    rgba(164, 231, 232, 1) 0%,
+    rgba(160, 45, 253, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+    background-color:white;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+
+    text-align: center;
+    box-shadow: 20px 20px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+#descricao {
+    color: #5D496B;
+}
+
+#gerar {
+    margin-top: 20px;
+    padding: 20px 40px;
+    border-radius: 50px;
+    border: none;
+    background: #CD96FD;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+
+}
+
+#gerar:hover {
+    color: white;
+    opacity: 1;
+    background: #AB4AFE;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+
+
+

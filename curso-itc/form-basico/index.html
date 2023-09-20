@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Básico</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form>
+      <div class="dados-pessoais">
+        <fieldset class="campos">
+          <legend>Dados pessoais</legend>
+          <div class="label">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="nome" />
+          </div>
+
+          <div class="label">
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" />
+          </div>
+
+          <div class="label">
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" />
+          </div>
+
+          <div class="label">
+            <label for="estados">Estado:</label>
+            <select name="estados" id="estados">
+              <option value="sao paulo">São Paulo</option>
+              <option value="rio de janeiro">Rio de Janeiro</option>
+              <option value="bahia">Bahia</option>
+              <option value="mato grosso">Mato Grosso</option>
+            </select>
+          </div>
+        </fieldset>
+      </div>
+      <div class="dados-profissionais">
+        <fieldset>
+          <legend>Dados Profissionais</legend>
+          <p>Natureza do Cargo</p>
+          <div class="natureza-cargo">
+            <input type="radio" name="natureza-cargo" id="cargo1" checked />
+            <label for="cargo1">Gerência</label>
+
+            <input type="radio" name="natureza-cargo" id="cargo2" />
+            <label for="cargo2">Financeiro</label>
+
+            <input type="radio" name="natureza-cargo" id="cargo3" />
+            <label for="cargo3">Recepção</label>
+
+            <input type="radio" name="natureza-cargo" id="cargo4" />
+            <label for="cargo4">Administrativo</label>
+
+            <input type="radio" name="natureza-cargo" id="cargo5" />
+            <label for="cargo5">Juridíco</label>
+          </div>
+
+          <p>Área de interesse</p>
+          <div class="area-interesse">
+            <input type="checkbox" name="area-interesse" id="interesse1" />
+            <label for="interesse1">Computação</label>
+
+            <input type="checkbox" name="area-interesse" id="interesse2" />
+            <label for="interesse2">Biologia</label>
+
+            <input type="checkbox" name="area-interesse" id="interesse3" />
+            <label for="interesse3">Meio Ambiente</label>
+
+            <input type="checkbox" name="area-interesse" id="interesse4" />
+            <label for="interesse4">Engenharia</label>
+
+            <input type="checkbox" name="area-interesse" id="interesse5" />
+            <label for="interesse5">História</label>
+          </div>
+
+          <div class="mini-cv">
+            <label for="mini-cv">Mini-currículo</label>
+            <textarea
+              name="description"
+              id="description"
+              cols="50"
+              rows="10"
+            ></textarea>
+          </div>
+        </fieldset>
+      </div>
+    </form>
+    <div class="buttons">
+      <button class="btn">Enviar</button>
+      <button class="btn">Limpar</button>
+    </div>
+  </body>
+</html>

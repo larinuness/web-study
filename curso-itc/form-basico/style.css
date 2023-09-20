@@ -1,0 +1,26 @@
+.label {
+  margin-bottom: 2px;
+}
+
+.campos input,
+select {
+  width: 200px;
+}
+
+.dados-pessoais {
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons button {
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.mini-cv {
+  margin-top: 20px;
+}
